@@ -31,4 +31,16 @@ public abstract class Person {
      public String getName() {
           return name;
      }
+     @Override
+     public boolean equals(Object o) {
+          if (this == o) return true;
+          if (o == null || getClass() != o.getClass()) return false;
+          Person person = (Person) o;
+          return force == person.force && height == person.height && Objects.equals(name, person.name) && Objects.equals(place, person.place) && stat == person.stat;
+     }
+
+     @Override
+     public int hashCode() {
+          return Objects.hash(name, force, height, place, stat);
+     }
 }
