@@ -18,7 +18,7 @@ public class Cord implements Moving {
     public String moveTheCord(int coordinate1, int coordinate2, Person k, Place p) {
         if (Math.abs(coordinate1 - coordinate2) < k.getForce() * Math.random()) {
             this.coordinate1 = p.GetCoordinate();
-            this.setP(p);
+            this.setPlace(p);
             return "Karlson pulled the " + name + " to the " + p.GetPlace();
         } else {
             return "Karlson had not enough forse to get the destination";
@@ -31,11 +31,11 @@ public class Cord implements Moving {
         }
         else{
             this.coordinate2 = park.getCoordinate2();
-            this.setP(park);
+            this.setPlace(park);
             return p.getName() + " " + "could take the Cord";
         }
     }
-    public void setP(Place p) {
+    public void setPlace(Place p) {
         this.place = p;
     }
 }
