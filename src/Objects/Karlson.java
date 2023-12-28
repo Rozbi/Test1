@@ -31,13 +31,13 @@ public class Karlson extends Person implements Playable {
     private int pleasure;
 
     @Override
-    public String play(int point, Status stat, Game g) {
+    public void play(int point, Status stat, Game g) {
         pleasure = (int) (Math.random() * point);
         if (pleasure > 15) {
-            return name + " " + "flew away, but promised to come back";
+            System.out.println( name + " " + "flew away, but promised to come back");
         } else {
         }
-        return name + " " + "came back quickly";
+        System.out.println(name + " " + "came back quickly");
     }
 
     @Override
