@@ -8,7 +8,7 @@ public class Bell implements Moving {
     private Status type;
     private String name;
     private Place place;
-    Status stat;
+    private Status stat;
 
     public Bell(String name, Status type, Place place) {
         this.type = type;
