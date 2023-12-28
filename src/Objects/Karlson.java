@@ -41,7 +41,7 @@ public class Karlson extends Person implements Playable {
     }
 
     @Override
-    public String changeStat(Person p) {
+    public String giveNewStat(Person p) {
         stat = Status.NORMAL;
         return stat.getStat();
     }
