@@ -13,7 +13,7 @@ public class Boy extends Person implements Playable {
     public String describe1() {
         return this.getName() + " " + this.stat.getStat();
     }
-    public String changeStat(Person p) {
+    public String GiveNewStat(Person p) {
         point = (int) (point + 10 * Math.random());
         if (point > 2) {
             this.stat = Status.THINKING;
@@ -30,11 +30,10 @@ public class Boy extends Person implements Playable {
         point = (int) (Math.random() * 20);
         if (point > 15) {
             this.stat = Status.THINKING;
-            return "Thinking only because of the "  + g.getType().getStat()+ " " + g.getName();
         } else {
             this.stat = Status.NORMAL;
-            return "Thinking not only because of the " + g.getType().getStat()+ " " + g.getName();
         }
+        return "Thinking not only because of the " + g.getType().getStat()+ " " + g.getName();
     }
     public String wait(Boy b){
         this.stat = Status.WAITING;
