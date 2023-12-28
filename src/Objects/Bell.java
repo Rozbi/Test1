@@ -19,13 +19,13 @@ public class Bell implements Moving {
     @Override
     public String moveTheObject(Person p, Object obj, Place park) {
         if (p.getHeight() + p.getForce() < park.getCoordinate2()) {
-            this.setP(park);
+            this.setPlace(park);
             return p.getName() + " could hang the bell";
         } else {
             return p.getName() + " could not hang the bell";
         }
     }
-    public void setP(Place p) {
+    public void setPlace(Place p) {
         this.place = p;
     }
 }
