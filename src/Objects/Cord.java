@@ -38,4 +38,16 @@ public class Cord implements Moving {
     public void setPlace(Place p) {
         this.place = p;
     }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Cord cord = (Cord) o;
+        return coordinate1 == cord.coordinate1 && coordinate2 == cord.coordinate2 && Objects.equals(name, cord.name) && Objects.equals(place, cord.place);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, place, coordinate1, coordinate2);
+    }
 }
