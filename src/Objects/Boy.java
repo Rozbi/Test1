@@ -13,7 +13,7 @@ public class Boy extends Person implements Playable {
     public String describe1() {
         return this.getName() + " " + this.stat.getStat();
     }
-    public String GiveNewStat(Person p) {
+    public String giveNewStat(Person p) {
         point = (int) (point + 10 * Math.random());
         if (point > 2) {
             this.stat = Status.THINKING;
