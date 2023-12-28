@@ -5,6 +5,7 @@ import Interfaces.Playable;
 
 public class Boy extends Person implements Playable {
     private Status stat;
+    int point = 0;
 
     public Boy(String name, Status type, int force, int height, Place place) {
         super(name,type, force, height, place);
@@ -23,7 +24,6 @@ public class Boy extends Person implements Playable {
             return this.describe1();
         }
     }
-    int point = 0;
 
     @Override
     public String play(int point, Status stat, Game g) {
