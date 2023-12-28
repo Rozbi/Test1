@@ -28,4 +28,16 @@ public class Bell implements Moving {
     public void setPlace(Place p) {
         this.place = p;
     }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Bell bell = (Bell) o;
+        return type == bell.type && Objects.equals(name, bell.name) && Objects.equals(place, bell.place) && stat == bell.stat;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(type, name, place, stat);
+    }
 }
