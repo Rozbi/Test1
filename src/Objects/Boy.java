@@ -26,14 +26,14 @@ public class Boy extends Person implements Playable {
     }
 
     @Override
-    public String play(int point, Status stat, Game g) {
+    public void play(int point, Status stat, Game g) {
         point = (int) (Math.random() * 20);
         if (point > 15) {
             this.stat = Status.THINKING;
         } else {
             this.stat = Status.NORMAL;
         }
-        return "Thinking not only because of the " + g.getType().getStat()+ " " + g.getName();
+        System.out.println("Thinking not only because of the " + g.getType().getStat()+ " " + g.getName());
     }
     public String wait(Boy b){
         this.stat = Status.WAITING;
